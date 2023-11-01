@@ -38,5 +38,24 @@ python manage.py runserver
 django-admin startapp <app-name>
 ```
 
-9. 앱 등록 => settings.py
-    
+9. 앱 등록 =>  `settings.py`
+```python
+INSTALLED_APPS= [
+    ...
+    '<appname>',
+]
+```
+
+10. `urls.py` > `views.py` > `template/*.html` 순서로 코드 작성
+
+
+
+## Model
+1. 모델 정의(  `models.py`)
+    - 모델의 이름은 기본적으로 단수 형태
+
+```python
+class Post(models.Model):
+    title = models.CharField(max_length = 100)
+    content = models.TextFild()
+```
