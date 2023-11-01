@@ -58,4 +58,10 @@ INSTALLED_APPS= [
 class Post(models.Model):
     title = models.CharField(max_length = 100)
     content = models.TextFild()
+
+```
+
+2. 번역본 생성
+```python
+python manage.py makemigrations
 ```
