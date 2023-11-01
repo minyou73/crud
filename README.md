@@ -87,5 +87,14 @@ python manage.py createsuperuser
 
 ### 1. Read
     - 전체 게시물 출력
+```python
+    def index(request):
+    posts = Post.objects.all()
+
+    context = {
+        'posts': posts,
+    }
+    return render(request, 'index.html', context)
     
+```
     - 하나의 게시물 출력
